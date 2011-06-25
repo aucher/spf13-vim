@@ -1,0 +1,28 @@
+set term=xterm
+set t_Co=256
+set background=dark
+set nofoldenable
+set foldminlines=99999
+set noshowmatch
+set nohlsearch
+set nospell
+"set nocursorline
+set hidden
+"set cpoptions=ces$
+set tabstop=2
+set shiftwidth=2
+set mousehide
+set virtualedit=all
+set synmaxcol=2048
+let g:DisableAutoPHPFolding=1
+let loaded_matchparen = 1
+noremap <silent> ,h :wincmd h<cr>
+noremap <silent> ,j :wincmd j<cr>
+noremap <silent> ,k :wincmd k<cr>
+noremap <silent> ,l :wincmd l<cr>
+nmap <silent> <F4> :!ctags -R --languages=php<CR>
+map! jj <ESC>
+imap jj <ESC>
+command! Did :!svn di | view -
+command! Dif :!svn di % | view -
+
