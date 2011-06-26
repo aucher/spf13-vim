@@ -28,4 +28,3 @@ map! jj <ESC>
 imap jj <ESC>
 command! Did :!svn di | view -
 command! Dif :!svn di % | view -
-filetype plugin indent off
