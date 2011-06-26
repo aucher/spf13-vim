@@ -6,7 +6,7 @@ set foldminlines=99999
 set noshowmatch
 set nohlsearch
 set nospell
-"set nocursorline
+set nocursorline
 set hidden
 "set cpoptions=ces$
 set tabstop=2
@@ -14,6 +14,7 @@ set shiftwidth=2
 set mousehide
 set virtualedit=all
 set synmaxcol=2048
+set mouse=""
 let g:DisableAutoPHPFolding=1
 let loaded_matchparen = 1
 noremap <silent> ,h :wincmd h<cr>
