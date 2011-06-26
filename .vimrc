@@ -63,8 +63,8 @@
 		"silent execute '!mkdir -p $HVOME/.vimbackup'
 		"silent execute '!mkdir -p $HOME/.vimswap'
 		"silent execute '!mkdir -p $HOME/.vimviews'
-		au BufWinLeave * silent! mkview  "make vim save view (state) (folds, cursor, etc)
-		au BufWinEnter * silent! loadview "make vim load view (state) (folds, cursor, etc)
+		"au BufWinLeave * silent! mkview  "make vim save view (state) (folds, cursor, etc)
+		"au BufWinEnter * silent! loadview "make vim load view (state) (folds, cursor, etc)
 	" }
 " }
 
