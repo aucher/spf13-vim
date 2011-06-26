@@ -11,6 +11,7 @@ set hidden
 "set cpoptions=ces$
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set mousehide
 set virtualedit=all
 set synmaxcol=2048
@@ -28,3 +29,6 @@ map! jj <ESC>
 imap jj <ESC>
 command! Did :!svn di | view -
 command! Dif :!svn di % | view -
+
+
+
