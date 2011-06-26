@@ -27,8 +27,5 @@ noremap <silent> ,l :wincmd l<cr>
 nmap <silent> <F4> :!ctags -R --languages=php<CR>
 map! jj <ESC>
 imap jj <ESC>
-command! Did :!svn di | view -
-command! Dif :!svn di % | view -
-
-
-
+command! Did :silent execute '!svn di | view -' | redraw!
+command! Dif :silent execute '!svn di % | view -' | redraw!
