@@ -15,7 +15,8 @@ set mousehide
 set virtualedit=all
 set synmaxcol=2048
 set mouse=""
-let g:DisableAutoPHPFolding=1
+let g:DisableAutoPHPFolding = 1
+let loaded_delimitMate = 1
 let loaded_matchparen = 1
 let g:autoclose_loaded = 1
 noremap <silent> ,h :wincmd h<cr>
