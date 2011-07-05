@@ -18,6 +18,7 @@ set synmaxcol=2048
 set mouse=""
 set scrolljump=1
 set scrolloff=8
+set nolist
 
 let g:DisableAutoPHPFolding = 1
 let loaded_delimitMate = 1
@@ -31,7 +32,6 @@ noremap <silent> ,k :wincmd k<cr>
 noremap <silent> ,l :wincmd l<cr>
 noremap <silent> ,df :Dif<cr>
 noremap <silent> ,dd :Did<cr>
-noremap <silent> ,ss :w<cr>
 noremap <silent> ,q :qa<cr>
 noremap <silent> ,cj :wincmd j<CR>:close<CR>
 noremap <silent> ,ck :wincmd k<CR>:close<CR>
@@ -44,8 +44,11 @@ noremap <silent> ,mk <C-W>K
 "noremap <silent> ,mh <C-W>H
 noremap <silent> ,mj <C-W>J
 noremap <silent> ,bd :bd<CR>
+noremap <silent> ss :w<cr>
 
+nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
 nmap <silent> ,w :set invwrap<CR>:set wrap?<CR>
+nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 
 inoremap <silent> <Esc> <Esc>`^
 
