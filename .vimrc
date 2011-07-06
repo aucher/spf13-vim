@@ -130,7 +130,7 @@
 	set pastetoggle=<F12>          	" pastetoggle (sane indentation on pastes)
 	"set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
 	" Remove trailing whitespaces and ^M chars
-	autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+	"autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 " }
 
 " Key (re)Mappings {
@@ -191,8 +191,8 @@
 	cmap cd. lcd %:p:h
 
 	" visual shifting (does not exit Visual mode)
-	vnoremap < <gv
-	vnoremap > >gv 
+	"vnoremap < <gv
+	"vnoremap > >gv 
 
 	" Fix home and end keybindings for screen, particularly on mac
 	" - for some reason this fixes the arrow keys too. huh.
@@ -390,15 +390,15 @@
 		" }
 		
 		" Debugging with VimDebugger {
-			map <F11> :DbgStepInto<CR>
-			map <F10> :DbgStepOver<CR>
-			map <S-F11> :DbgStepOut<CR>
-			map <F5> :DbgRun<CR>
-			map <F6> :DbgDetach<CR>
-			map <F8> :DbgToggleBreakpoint<CR>
-			map <S-F8> :DbgFlushBreakpoints<CR>
-			map <F9> :DbgRefreshWatch<CR>
-			map <S-F9> :DbgAddWatch<CR>
+			"map <F11> :DbgStepInto<CR>
+			"map <F10> :DbgStepOver<CR>
+			"map <S-F11> :DbgStepOut<CR>
+			"map <F5> :DbgRun<CR>
+			"map <F6> :DbgDetach<CR>
+			"map <F8> :DbgToggleBreakpoint<CR>
+			"map <S-F8> :DbgFlushBreakpoints<CR>
+			"map <F9> :DbgRefreshWatch<CR>
+			"map <S-F9> :DbgAddWatch<CR>
 		" }
 
 		" Taglist Variables {

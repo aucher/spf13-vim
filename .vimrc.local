@@ -6,7 +6,6 @@ set foldminlines=99999
 set noshowmatch
 set nohlsearch
 set nospell
-set nocursorline
 set hidden
 "set cpoptions=ces$
 set tabstop=2
@@ -16,8 +15,8 @@ set mousehide
 set virtualedit=all
 set synmaxcol=2048
 set mouse=""
-set scrolljump=1
-set scrolloff=8
+"set scrolljump=1
+"set scrolloff=8
 set nolist
 set noshowcmd
 
@@ -50,6 +49,8 @@ noremap <silent> ss :w<cr>
 nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
 nmap <silent> ,w :set invwrap<CR>:set wrap?<CR>
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
+nmap <silent> ,fc :FufMruCmd<cr>
+nmap <silent> <F7> :NERDTreeToggle<CR>
 
 inoremap <silent> <Esc> <Esc>`^
 
@@ -80,3 +81,12 @@ func! PhpUnComment() range
 
     let &g:paste = l:paste
 endfunc
+
+nmap <silent> <F5> :call ToggleMouse()<CR>
+function! ToggleMouse()
+  if &mouse == "a""
+    set mouse=""
+  else
+    set mouse=a
+  endif
+endfunction
