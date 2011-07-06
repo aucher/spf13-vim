@@ -21,7 +21,7 @@ endtry
 "
 function s:initialize()
   "---------------------------------------------------------------------------
-  call l9#defineVariableDefault('g:fuf_modesDisable'     , [ 'mrufile', 'mrucmd', ])
+  call l9#defineVariableDefault('g:fuf_modesDisable'     , [ 'mrufile', ])
   call l9#defineVariableDefault('g:fuf_keyOpen'          , '<CR>')
   call l9#defineVariableDefault('g:fuf_keyOpenSplit'     , '<C-j>')
   call l9#defineVariableDefault('g:fuf_keyOpenVsplit'    , '<C-k>')
