@@ -70,3 +70,6 @@ function! ToggleMouse()
     set mouse=a
   endif
 endfunction
+
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-i>"
+let g:SuperTabLongestHighlight = 1
