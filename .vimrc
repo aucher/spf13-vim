@@ -34,7 +34,7 @@
 " General {
 	set background=dark         " Assume a dark background
     if !has('win32') && !has('win64')
-        set term=$TERM       " Make arrow and other keys work
+        "set term=$TERM       " Make arrow and other keys work
     endif
 	filetype plugin indent on  	" Automatically detect file types.
 	syntax on 					" syntax highlighting
@@ -416,7 +416,7 @@
 		 " }
 
 		" JSON {
-			"nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
+			nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
 		 " }
 	" }
 " }
@@ -426,7 +426,7 @@
 	if has('gui_running')
 		set guioptions-=T          	" remove the toolbar
 		set lines=40               	" 40 lines of text instead of 24,
-		set transparency=5          " Make the window slightly transparent
+		"set transparency=5          " Make the window slightly transparent
 	else
 		set term=builtin_ansi       " Make arrow and other keys work
 	endif
