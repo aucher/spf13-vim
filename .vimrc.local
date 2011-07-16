@@ -19,44 +19,51 @@ set scrolloff=3
 set nolist
 set noshowcmd
 set guioptions=acg
+set autoread
 
 let g:DisableAutoPHPFolding = 1
 let loaded_delimitMate = 1
 let loaded_matchparen = 1
 let g:autoclose_loaded = 1
 let g:NERDTreeWinSize = 60
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-i>"
+let g:SuperTabLongestHighlight = 1
+
+unmap <leader>jt
 
 noremap <silent> ,h :wincmd h<cr>
 noremap <silent> ,j :wincmd j<cr>
 noremap <silent> ,k :wincmd k<cr>
 noremap <silent> ,l :wincmd l<cr>
+noremap <silent> ,cj :wincmd j<cr>:close<cr>
+noremap <silent> ,ck :wincmd k<cr>:close<cr>
+noremap <silent> ,ch :wincmd h<cr>:close<cr>
+noremap <silent> ,cl :wincmd l<cr>:close<cr>
+noremap <silent> ,ml <c-w>L
+noremap <silent> ,mk <c-w>K
+"noremap <silent> ,mh <c-w>H
+noremap <silent> ,mj <c-w>J
+noremap <silent> ,cc :close<cr>
+noremap <silent> ,cw :cclose<cr>
+noremap <silent> ,bd :bd<cr>
+noremap <silent> ss :w<cr>
 noremap <silent> ,df :Dif<cr>
 noremap <silent> ,dd :Did<cr>
-noremap <silent> ,cj :wincmd j<CR>:close<CR>
-noremap <silent> ,ck :wincmd k<CR>:close<CR>
-noremap <silent> ,ch :wincmd h<CR>:close<CR>
-noremap <silent> ,cl :wincmd l<CR>:close<CR>
-noremap <silent> ,cc :close<CR>
-noremap <silent> ,cw :cclose<CR>
-noremap <silent> ,ml <C-W>L
-noremap <silent> ,mk <C-W>K
-"noremap <silent> ,mh <C-W>H
-noremap <silent> ,mj <C-W>J
-noremap <silent> ,bd :bd<CR>
-noremap <silent> ss :w<cr>
 
-nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
-nmap <silent> ,w :set invwrap<CR>:set wrap?<CR>
-nmap <silent> ,hl :set invhls<CR>:set hls?<CR>
+nmap <silent> ,p :set invpaste<cr>:set paste?<cr>
+nmap <silent> ,w :set invwrap<cr>:set wrap?<cr>
+nmap <silent> ,hl :set invhls<cr>:set hls?<cr>
+
+nmap <silent> <F4> :!ctags -R --languages=php<cr>
+nmap <silent> <F5> :set invcul<cr>:set cul?<cr>
+nmap <silent> <F6> :call ToggleMouse()<cr>
+nmap <silent> <F7> :NERDTreeToggle<cr>
+
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 nmap <silent> ,fc :FufMruCmd<cr>
-nmap <silent> <F7> :NERDTreeToggle<CR>
-nmap <silent> <F6> :call ToggleMouse()<CR>
-nmap <silent> <F5> :set invcul<CR>:set cul?<CR>
 
 inoremap <silent> <Esc> <Esc>`^
 
-nmap <silent> <F4> :!ctags -R --languages=php<CR>
 "map! jj <ESC>
 "imap jj <ESC>
 
@@ -70,6 +77,3 @@ function! ToggleMouse()
     set mouse=a
   endif
 endfunction
-
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-i>"
-let g:SuperTabLongestHighlight = 1
