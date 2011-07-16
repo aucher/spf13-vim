@@ -23,11 +23,13 @@ set autoread
 
 let g:DisableAutoPHPFolding = 1
 let loaded_delimitMate = 1
-let loaded_matchparen = 1
+"let loaded_matchparen = 1
 let g:autoclose_loaded = 1
 let g:NERDTreeWinSize = 60
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-i>"
-let g:SuperTabLongestHighlight = 1
+if has('gui_running')
+  let g:SuperTabLongestHighlight = 1
+endif
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 unmap <leader>jt
 
@@ -63,6 +65,12 @@ nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 nmap <silent> ,fc :FufMruCmd<cr>
 
 inoremap <silent> <Esc> <Esc>`^
+
+if has('gui_running')
+  imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+else
+  imap <nul> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+endif
 
 "map! jj <ESC>
 "imap jj <ESC>
