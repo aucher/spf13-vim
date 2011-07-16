@@ -12,11 +12,10 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set mousehide
-set virtualedit=all
 set synmaxcol=2048
 set mouse=""
-"set scrolljump=1
-"set scrolloff=8
+set scrolljump=1
+set scrolloff=3
 set nolist
 set noshowcmd
 
@@ -32,7 +31,6 @@ noremap <silent> ,k :wincmd k<cr>
 noremap <silent> ,l :wincmd l<cr>
 noremap <silent> ,df :Dif<cr>
 noremap <silent> ,dd :Did<cr>
-noremap <silent> ,q :qa<cr>
 noremap <silent> ,cj :wincmd j<CR>:close<CR>
 noremap <silent> ,ck :wincmd k<CR>:close<CR>
 noremap <silent> ,ch :wincmd h<CR>:close<CR>
@@ -46,23 +44,24 @@ noremap <silent> ,mj <C-W>J
 noremap <silent> ,bd :bd<CR>
 noremap <silent> ss :w<cr>
 
-nmap <leader>bb :BufExplorer<CR>
 nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
 nmap <silent> ,w :set invwrap<CR>:set wrap?<CR>
+nmap <silent> ,hl :set invhls<CR>:set hls?<CR>
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 nmap <silent> ,fc :FufMruCmd<cr>
 nmap <silent> <F7> :NERDTreeToggle<CR>
+nmap <silent> <F6> :call ToggleMouse()<CR>
+nmap <silent> <F5> :set invcul<CR>:set cul?<CR>
 
 inoremap <silent> <Esc> <Esc>`^
 
 nmap <silent> <F4> :!ctags -R --languages=php<CR>
-map! jj <ESC>
-imap jj <ESC>
+"map! jj <ESC>
+"imap jj <ESC>
 
 command! Did :silent execute '!svn di | colordiff | less' | redraw!
 command! Dif :silent execute '!svn di % | colordiff | less' | redraw!
 
-nmap <silent> <F5> :call ToggleMouse()<CR>
 function! ToggleMouse()
   if &mouse == "a""
     set mouse=""
