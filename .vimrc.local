@@ -18,6 +18,7 @@ set scrolljump=1
 set scrolloff=3
 set nolist
 set noshowcmd
+set guioptions=acg
 
 let g:DisableAutoPHPFolding = 1
 let loaded_delimitMate = 1
