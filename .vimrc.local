@@ -2,7 +2,6 @@ set term=xterm
 set t_Co=256
 set background=dark
 set nofoldenable
-set foldminlines=99999
 set noshowmatch
 set nohlsearch
 set nospell
@@ -15,7 +14,7 @@ set mousehide
 set synmaxcol=2048
 set mouse=""
 set scrolljump=1
-set scrolloff=3
+set scrolloff=0
 set nolist
 set noshowcmd
 set guioptions=acg
@@ -23,7 +22,7 @@ set autoread
 
 let g:DisableAutoPHPFolding = 1
 let loaded_delimitMate = 1
-"let loaded_matchparen = 1
+let loaded_matchparen = 1
 let g:autoclose_loaded = 1
 let g:NERDTreeWinSize = 60
 if has('gui_running')
@@ -31,6 +30,10 @@ if has('gui_running')
 endif
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
+cunmap w!!
+cunmap wQ
+cunmap cwd
+cunmap cd.
 unmap <leader>jt
 
 noremap <silent> ,h :wincmd h<cr>
