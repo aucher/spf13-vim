@@ -23,6 +23,7 @@ set autoread
 let g:DisableAutoPHPFolding = 1
 let loaded_delimitMate = 1
 let loaded_matchparen = 1
+let loaded_showmarks = 1
 let g:autoclose_loaded = 1
 let g:NERDTreeWinSize = 60
 if has('gui_running')
@@ -46,7 +47,7 @@ noremap <silent> ,ch :wincmd h<cr>:close<cr>
 noremap <silent> ,cl :wincmd l<cr>:close<cr>
 noremap <silent> ,ml <c-w>L
 noremap <silent> ,mk <c-w>K
-"noremap <silent> ,mh <c-w>H
+noremap <silent> ,mh <c-w>H
 noremap <silent> ,mj <c-w>J
 noremap <silent> ,cc :close<cr>
 noremap <silent> ,cw :cclose<cr>
