@@ -89,3 +89,5 @@ function! ToggleMouse()
     set mouse=a
   endif
 endfunction
+
+au BufNewFile,BufRead *.php unmap <buffer>;
